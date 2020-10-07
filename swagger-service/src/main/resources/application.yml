@@ -11,7 +11,7 @@ server:
   port: 8081
 
 api-docs.endpoints:
-  authentication-service:
-    gateway-prefix: /api
-    service-url: http://service.namespace
-    service-path: /resource/api-docs
+  - authentication-service:
+      gateway-prefix: /api
+      service-url: http://service.namespace
+      service-path: /resource/api-docs

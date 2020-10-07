@@ -2,10 +2,11 @@ package com.igp.swaggerservice.config;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 
-@Data
 @AllArgsConstructor(staticName = "of")
+@Data
 public class SwaggerUrl {
-    private String url;
     private String name;
+    private String url;
 }

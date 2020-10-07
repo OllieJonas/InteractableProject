@@ -4,18 +4,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
+import java.util.Map;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-@ConfigurationProperties(prefix = "api-docs.endpoints")
+@Configuration
+@ConfigurationProperties(prefix = "api-docs")
 public class ApiDocEndpointsConfig {
 
-    private List<ApiDocEndpoint> endPoints;
+    private List<Map<String, ApiDocEndpoint>> endPoints;
 
     @Data
+    @NoArgsConstructor
     public static class ApiDocEndpoint {
         private String gatewayPrefix;
         private String serviceUrl;
