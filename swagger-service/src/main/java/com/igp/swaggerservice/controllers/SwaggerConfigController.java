@@ -26,7 +26,9 @@ public class SwaggerConfigController {
     @Autowired
     public SwaggerConfigController(ApiDocEndpointsConfig apiDocEndpointsConfig) {
         this.apiDocEndpointsConfig = apiDocEndpointsConfig;
+
         Objects.requireNonNull(apiDocEndpointsConfig.getEndPoints());
+
         this.swaggerUrlsConfig = buildSwaggerConfig();
     }
 
