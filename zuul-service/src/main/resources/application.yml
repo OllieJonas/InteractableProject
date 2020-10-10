@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+api-docs.endpoints:
+  - authentication-service:
+      gateway-prefix: /api
+      service-url: http://localhost:8080
+      service-path: /resource/api-docs
+
+zuul:
+  routes:
+    authentication-service:
+      path: /api/authentication-service
+      serviceId: auth
+
